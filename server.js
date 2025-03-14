@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();  // create an express app
-const port = 3000;  // we will use this later              // we will use this later
+const port = 3000 || process.env.port;  // we will use this later              // we will use this later
 app.get('/', (req, res) => {
   res.send('Hello World!');
 }); // create a route for the home page
